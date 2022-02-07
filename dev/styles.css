@@ -1,0 +1,266 @@
+/* Social Media Accounts w/links
+
+Facebook: https://www.facebook.com/mediaresearchcenter
+Twitter: https://twitter.com/theMRC
+YouTube: https://www.youtube.com/user/MRCTVdotOrg
+Instagram: https://www.instagram.com/mediaresearchcenter/
+Parler: https://parler.com/#/user/theMRC
+Rumble: https://rumble.com/c/MRCTV
+Gettr: https://gettr.com/user/themrc
+
+LinkedIn: 
+Tiktok: https://www.tiktok.com/@themrctv
+
+*/
+
+/* global formats */
+
+:root {
+  --mrc-blue: #002f87;
+  --mrc-gold: #c9920e;
+  --mrc-grey: #333e48;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 21px;
+}
+
+[class^="area-"] {
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  height: 13rem;
+  /* border: solid 1px var(--mrc-blue); */
+  padding: 10px;
+  /* z-index: 2; */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  font-family: sans-serif;
+  text-align: center;
+  max-width: 214px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  padding: 20px;
+}
+
+/* [class^="area-"]:hover {
+  transform: translate(5px);
+} */
+*/
+
+/* .area-facebook {
+    font-family: sans-serif;
+    text-align: center;
+    max-width: 214px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  .area-twitter {
+    font-family: sans-serif;
+    text-align: center;
+    max-width: 214px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  .area-youtube {
+    font-family: sans-serif;
+    text-align: center;
+    max-width: 214px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  .area-instagram {
+    font-family: sans-serif;
+    text-align: center;
+    max-width: 214px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  .area-parler {
+    font-family: sans-serif;
+    text-align: center;
+    max-width: 214px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  .area-tiktok {
+    font-family: sans-serif;
+    text-align: center;
+    max-width: 214px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  .area-rumble {
+    font-family: sans-serif;
+    text-align: center;
+    max-width: 214px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  .area-gettr {
+    font-family: sans-serif;
+    text-align: center;
+    max-width: 214px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  } */
+
+.card {
+  text-align: center;
+  max-width: 214px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transform-style: preserve-3d;
+  transition: all 0.8s ease;
+}
+
+.back {
+  text-align: center;
+  max-width: 214px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  backface-visibility: hidden;
+  background: #002f87;
+  transform: rotateY(180deg);
+  position: absolute;
+}
+
+.flipCard {
+  transform: rotateY(180deg);
+}
+
+.logo {
+  /* object-fit: cover; */
+  /* border-radius: 50%; */
+  /* margin: 0 auto 20px auto; */
+  margin: 25px auto 10px auto;
+  display: block;
+  /* margin-top: 10px; */
+  top: 10px;
+}
+
+.logo-parler {
+  width: 65px;
+  height: 48px;
+}
+
+.sm_name {
+  font-size: 1.2em;
+  margin: -40px auto 10px auto;
+  font-weight: bold;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em;
+}
+
+body {
+  /* background: linear-gradient(var(--mrc-blue), #fff); */
+  background: #f9f9f9;
+  height: 100vh;
+}
+
+.wrapper {
+  height: 80vh;
+  width: 50%;
+  margin: 20px auto;
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(214px, 1fr));
+  gap: 20px;
+}
+
+#follow-btn {
+  background: linear-gradient(var(--mrcblue), (--mrc-grey));
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-family: "Helvetica";
+  font-size: 12pt;
+  border: 1px solid;
+  position: relative;
+  width: 75px;
+  height: 30px;
+  border-radius: 3px;
+  top: 10px;
+  cursor: hand;
+}
+
+button:hover {
+  color: #002f87;
+}
+
+.card:hover {
+  transform: rotateY(1.5);
+}
+
+.bg-light {
+  /* background: url(https://cdn.mrc.org/static/keystone-pipeline/iueshg%3Bsigarsligs.png) no-repeat; */
+  background-size: cover;
+  background-color: var(--clr-primary-mrcblue);
+}
+
+.bg-light img {
+  max-height: 6rem;
+  position: relative;
+  z-index: 3;
+}
+
+header {
+  padding: 1rem;
+  position: relative;
+  z-index: 0;
+}
+
+header .header--img {
+  background-size: cover;
+  background-position: top center;
+  width: 100%;
+  height: rem;
+}
+
+header .header--logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #002f87;
+  height: 7rem;
+}
+
+.img-fluid {
+  max-width: 100%;
+  margin: 0 auto;
+  size: 0.5rem;
+}
+
+.container--narrow {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 76%;
+}
+
+@media screen and (max-width: 895px) {
+  .wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(214px, 1fr));
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* display: block; */
+    margin: 20px auto;
+    width: 214px;
+    /* float: left;
+    width: 50%; */
+  }
+}

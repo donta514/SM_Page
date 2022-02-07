@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+        function flipCard() {
+            document.getElementById("card").innerHTML = card.classList.toggle("flipCard")
+        }
+    </script>
+    <title>Social Media Page</title>
+</head>
+
+<body>
+    <header class="bg-light opacityFilter">
+        <div class="container container--narrow header-img-wrapper"><a href="https://www.mrc.org/"><img
+                    alt="The MRC | America's Media Watchdog" class="img-fluid"
+                    src="https://cdn.mrc.org/U/OP/LOGO/MRC_Logo_White.png" /> </a>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <div class="area-facebook">
+            <img src="logos/facebook_48.png" alt="Facebook Icon" class="logo">
+            <div class="sm_name">Facebook</div>
+            <div class="card" id="card">
+                <div class="front">
+                    <div class="detail">
+                        11,752,582 <i class="material-icons">person</i>
+                    </div>
+                    <button type="button" id="follow-btn" onclick="flipCard()"> + Follow</button>
+                </div>
+                <div class="back">
+                    <p>Hello ddddd</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="area-twitter">
+            <img src="logos/twitter_48.png" alt="Twitter Icon" class="logo">
+            <div class="card">
+                <div class="sm_name">Twitter</div>
+                <div class="detail">
+                    860,081 <i class="material-icons">person</i>
+                </div>
+                <button id="follow-btn"> + Follow</button>
+            </div>
+        </div>
+
+
+        <div class="area-youtube">
+            <img src="logos/youtube_48.png" alt="YouTube Icon" class="logo">
+            <div class="card">
+                <div class="sm_name">YouTube</div>
+                <div class="detail">
+                    133,840 <i class="material-icons">person</i>
+                </div>
+                <button id="follow-btn"> + Follow</button>
+            </div>
+        </div>
+
+
+        <div class="area-instagram">
+            <img src="logos/instagram_48.png" alt="Instagram Icon" class="logo">
+            <div class="card">
+                <div class="sm_name">Instagram</div>
+                <div class="detail">
+                    80,778 <i class="material-icons">person</i>
+                </div>
+                <button id="follow-btn"> + Follow</button>
+            </div>
+        </div>
+
+
+        <div class="area-tiktok">
+            <img src="logos/tiktok_48.png" alt="Tiktok Icon" class="logo">
+            <div class="card">
+                <div class="sm_name">Tiktok</div>
+                <div class="detail">
+                    59,412 <i class="material-icons">person</i>
+                </div>
+                <button id="follow-btn"> + Follow</button>
+            </div>
+        </div>
+
+
+
+
+        <div class="area-parler">
+            <img src="logos/parler_48.png" alt="Parler Icon" class="logo-parler">
+            <div class="card">
+                <div class="sm_name">Parler</div>
+                <div class="detail">
+                    345,900 <i class="material-icons">person</i>
+                </div>
+                <button id="follow-btn"> + Follow</button>
+            </div>
+        </div>
+
+        <div class="area-rumble">
+            <img src="logos/facebook_48.png" alt="Rumble Icon" class="logo">
+            <div class="card">
+                <div class="sm_name">Rumble</div>
+                <div class="detail">
+                    9,563 <i class="material-icons">person</i>
+                </div>
+                <button id="follow-btn"> + Follow</button>
+            </div>
+        </div>
+
+
+        <div class="area-gettr">
+            <img src="logos/facebook_48.png" alt="Gettr Icon" class="logo">
+            <div class="card">
+                <div class="sm_name">Gettr</div>
+                <div class="detail">
+                    341,533 <i class="material-icons">person</i>
+                </div>
+                <button id="follow-btn"> + Follow</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

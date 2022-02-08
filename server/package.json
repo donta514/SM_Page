@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "client": "nodemon app.js",
+    "scrape": "node scrape.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/donta514/SM_Page/issues"
   },
-  "homepage": "https://github.com/donta514/SM_Page#readme"
+  "homepage": "https://github.com/donta514/SM_Page#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15",
+    "puppeteer": "^13.2.0"
+  }
 }

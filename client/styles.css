@@ -35,15 +35,43 @@ html {
 * {
   margin: 0;
   padding: 0;
+  /* font-size: 21px; */
   box-sizing: border-box;
-  font-size: 21px;
 }
+
+header {
+  background-color: var(--mrc-blue);
+  padding: 1rem;
+}
+
+header .mrclogo img {
+  max-width: 100%;
+  margin: 0 auto;
+  height: 5rem;
+}
+
+header .header-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .mrclogo {
+  height: 100%;
+}
+
+/* .header-wrapper {
+  text-align: center;
+  background: #002f87;
+  color: #002f87;
+} */
 
 [class^="area-"] {
   display: grid;
   place-items: center;
   border-radius: 10px;
-  height: 13rem;
+  height: 16rem;
+  /* font-size: 21px; */
   /* border: solid 1px var(--mrc-blue); */
   padding: 10px;
   /* z-index: 2; */
@@ -58,66 +86,7 @@ html {
 /* [class^="area-"]:hover {
   transform: translate(5px);
 } */
-*/
-
-/* .area-facebook {
-    font-family: sans-serif;
-    text-align: center;
-    max-width: 214px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-  }
-  .area-twitter {
-    font-family: sans-serif;
-    text-align: center;
-    max-width: 214px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-  }
-  .area-youtube {
-    font-family: sans-serif;
-    text-align: center;
-    max-width: 214px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-  }
-  .area-instagram {
-    font-family: sans-serif;
-    text-align: center;
-    max-width: 214px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-  }
-  .area-parler {
-    font-family: sans-serif;
-    text-align: center;
-    max-width: 214px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-  }
-  .area-tiktok {
-    font-family: sans-serif;
-    text-align: center;
-    max-width: 214px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-  }
-  .area-rumble {
-    font-family: sans-serif;
-    text-align: center;
-    max-width: 214px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-  }
-  .area-gettr {
-    font-family: sans-serif;
-    text-align: center;
-    max-width: 214px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-  } */
-
-.card {
+*/ .card {
   text-align: center;
   max-width: 214px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -154,12 +123,15 @@ html {
 .logo-parler {
   width: 65px;
   height: 48px;
+  /* display: block; */
+  margin: 25px auto 10px auto;
 }
 
 .sm_name {
-  font-size: 1.2em;
+  font-size: 21px;
   margin: -40px auto 10px auto;
   font-weight: bold;
+  padding-top: 1rem;
 }
 
 .detail {
@@ -213,7 +185,7 @@ button:hover {
   background-color: var(--clr-primary-mrcblue);
 }
 
-.bg-light img {
+/* .bg-light img {
   max-height: 6rem;
   position: relative;
   z-index: 3;
@@ -250,7 +222,7 @@ header .header--logo {
   margin-left: auto;
   margin-right: auto;
   max-width: 76%;
-}
+} */
 
 @media screen and (max-width: 895px) {
   .wrapper {
@@ -264,3 +236,5 @@ header .header--logo {
     width: 50%; */
   }
 }
+
+

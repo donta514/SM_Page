@@ -7,30 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <script>
-        function flipCard() {
-            document.getElementById("card").innerHTML = card.classList.toggle("flipCard")
-        }
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
     <title>Social Media Page</title>
 </head>
 
 <body>
-    <!-- <header class="bg-light opacityFilter">
-        <div class="container container--narrow header-img-wrapper"><a href="https://www.mrc.org/"><img
-                    alt="The MRC | America's Media Watchdog" class="img-fluid"
-                    src="https://cdn.mrc.org/U/OP/LOGO/MRC_Logo_White.png" /> </a>
-        </div>
-    </header> -->
-
-    <!-- <header class="header-wrapper">
-        <div class="header">
-            <a href="https://www.mrc.org/"><img src="https://cdn.mrc.org/U/OP/LOGO/MRC_Logo_White.png"
-                    alt="The MRC | America's Media Watchdog">
-            </a>
-        </div>
-    </header> -->
-
 
     <header class="header">
         <div class="header-wrapper">
@@ -41,108 +23,127 @@
     </header>
 
     <div class="wrapper">
-        <div class="card" id="card">
-            <div class="area-facebook">
-                <div class="front">
+        <div class="grid">
+
+            <div class="card ">
+                <div class="front card--side">
                     <img src="logos/facebook_48.png" alt="Facebook Icon" class="logo">
                     <div class="sm_name">Facebook</div>
                     <div class="detail">
                         11,752,582 <i class="material-icons">person</i>
                     </div>
-                    <button type="button" id="follow-btn" onclick="flipCard()"> + Follow</button>
+                    <button type="button" class="follow-btn""> + Follow</button>
                 </div>
-                <div class="back">
-                    hello world
+                <div class=" back card--side">
+                        hello world
                 </div>
             </div>
-        </div>
 
 
-        <div class="card">
-            <div class="area-twitter">
-                <img src="logos/twitter_48.png" alt="Twitter Icon" class="logo">
-                <div class="sm_name">Twitter</div>
-                <div class="detail">
-                    860,081 <i class="material-icons">person</i>
+            <div class="card">
+                <div class="front card--side">
+                    <img src="logos/twitter_48.png" alt="Twitter Icon" class="logo">
+                    <div class="sm_name">Twitter</div>
+                    <div class="detail">
+                        <span id="twitterCount"></span><i class="material-icons">person</i>
+                    </div>
+                    <button class="follow-btn""> + Follow</button>
                 </div>
-                <button id="follow-btn"> + Follow</button>
+                <div class=" back card--side">
+                        hello world
+                </div>
             </div>
-        </div>
 
 
-        <div class="card">
-            <div class="area-youtube">
-                <img src="logos/youtube_48.png" alt="YouTube Icon" class="logo">
-                <div class="sm_name">YouTube</div>
-                <div class="detail">
-                    133,840 <i class="material-icons">person</i>
+            <div class=" card">
+                <div class="front card--side">
+                    <img src="logos/youtube_48.png" alt="YouTube Icon" class="logo">
+                    <div class="sm_name">YouTube</div>
+                    <div class="detail">
+                        133,840 <i class="material-icons">person</i>
+                    </div>
+                    <button class="follow-btn""> + Follow</button>
                 </div>
-                <button id="follow-btn"> + Follow</button>
+                <div class=" back card--side">
+                        hello world
+                </div>
             </div>
-        </div>
 
 
-        <div class="card">
-            <div class="area-instagram">
-                <img src="logos/instagram_48.png" alt="Instagram Icon" class="logo">
-                <div class="sm_name">Instagram</div>
-                <div class="detail">
-                    80,778 <i class="material-icons">person</i>
+            <div class=" card">
+                <div class="front card--side">
+                    <img src="logos/instagram_48.png" alt="Instagram Icon" class="logo">
+                    <div class="sm_name">Instagram</div>
+                    <div class="detail">
+                        80,778 <i class="material-icons">person</i>
+                    </div>
+                    <button class="follow-btn""> + Follow</button>
                 </div>
-                <button id="follow-btn"> + Follow</button>
+                <div class=" back card--side">
+                        hello world
+                </div>
             </div>
-        </div>
 
 
-        <div class="card">
-            <div class="area-tiktok">
-                <img src="logos/tiktok_48.png" alt="Tiktok Icon" class="logo-tiktok">
-                <div class="sm_name">Tiktok</div>
-                <div class="detail">
-                    59,412 <i class="material-icons">person</i>
+            <div class=" card">
+                <div class="front card--side">
+                    <img src="logos/tiktok_48.png" alt="Tiktok Icon" class="logo-tiktok">
+                    <div class="sm_name">Tiktok</div>
+                    <div class="detail">
+                        59,412 <i class="material-icons">person</i>
+                    </div>
+                    <button class="follow-btn""> + Follow</button>
                 </div>
-                <button id="follow-btn"> + Follow</button>
+                <div class=" back card--side">
+                        hello world
+                </div>
             </div>
-        </div>
 
-
-
-
-        <div class="card">
-            <div class="area-parler">
-                <img src="logos/parler_48.png" alt="Parler Icon" class="logo-parler">
-                <div class="sm_name">Parler</div>
-                <div class="detail">
-                    345,900 <i class="material-icons">person</i>
+            <div class=" card">
+                <div class="front card--side">
+                    <img src="logos/parler_48.png" alt="Parler Icon" class="logo-parler">
+                    <div class="sm_name">Parler</div>
+                    <div class="detail">
+                        345,900 <i class="material-icons">person</i>
+                    </div>
+                    <button class="follow-btn""> + Follow</button>
                 </div>
-                <button id="follow-btn"> + Follow</button>
+                <div class=" back card--side">
+                        hello world
+                </div>
             </div>
-        </div>
 
-        <div class="card">
-            <div class="area-rumble">
-                <img src="logos/rumble_48.png" alt="Rumble Icon" class="logo-rumble">
-                <div class="sm_name">Rumble</div>
-                <div class="detail">
-                    9,563 <i class="material-icons">person</i>
+            <div class=" card">
+                <div class="front card--side">
+                    <img src="logos/rumble_48.png" alt="Rumble Icon" class="logo-rumble">
+                    <div class="sm_name">Rumble</div>
+                    <div class="detail">
+                        9,563 <i class="material-icons">person</i>
+                    </div>
+                    <button class="follow-btn""> + Follow</button>
                 </div>
-                <button id="follow-btn"> + Follow</button>
+                <div class=" back card--side">
+                        hello world
+                </div>
             </div>
-        </div>
 
 
-        <div class="card">
-            <div class="area-gettr">
-                <img src="logos/gettr_48.png" alt="Gettr Icon" class="logo-gettr">
-                <div class="sm_name">Gettr</div>
-                <div class="detail">
-                    341,533 <i class="material-icons">person</i>
+            <div class=" card">
+                <div class="front card--side">
+                    <img src="logos/gettr_48.png" alt="Gettr Icon" class="logo-gettr">
+                    <div class="sm_name">Gettr</div>
+                    <div class="detail">
+                        341,533 <i class="material-icons">person</i>
+                    </div>
+                    <button class="follow-btn""> + Follow</button>
                 </div>
-                <button id="follow-btn"> + Follow</button>
+                <div class=" back card--side">
+                        hello world
+                </div>
             </div>
         </div>
     </div>
-
+    <script src=" ./main.js"></script>
 </body>
 
 </html>

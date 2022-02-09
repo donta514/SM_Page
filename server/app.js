@@ -14,6 +14,12 @@ app.get('/', (req, res) => {
     res.send("I'm working")
 })
 
+app.get('/socialstats', (req, res) => {
+    const stats = require('./socialStats.json')
+    res.status(200).json(stats)
+    // res.send("I'm working")
+})
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
 })

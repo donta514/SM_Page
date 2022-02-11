@@ -18,17 +18,18 @@ const scrape = async () => {
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3419.0 Safari/537.36"
   );
 
+
   //Instagram
 
-  await page.goto("https://www.instagram.com/mediaresearchcenter/", {
-    waitUntil: "networkidle0",
-  });
+  // await page.goto("https://www.instagram.com/mediaresearchcenter/", {
+  //   waitUntil: "networkidle0",
+  // });
 
-  const Instagram = await page.$eval(
-    "header ul li:nth-child(2) span",
-    (el) => el.innerHTML
-  );
-  console.log("Instagram", Instagram);
+  // const Instagram = await page.$eval(
+  //   "header ul li:nth-child(2) span",
+  //   (el) => el.innerHTML
+  // );
+  // console.log("Instagram", Instagram);
 
   // console.log("beep boop - human wait");
   // await page.waitForTimeout(500 + Math.floor(Math.random() * 1000));
@@ -92,7 +93,7 @@ const scrape = async () => {
   });
 
   const Gettr = await page.$eval(
-    "#root > main > div > div > div > div > div > div > div.jss84 > div.jss83 > div.jss86 > div.jss95 > div.jss98 > a:nth-child(2) > span.tooltiptext",
+    "#root > main > div > div > div > div > div > div > div.jss85 > div.jss84 > div.jss87 > div.jss96 > div.jss99 > a:nth-child(2) > span.tooltiptext",
     (el) => el.innerHTML
   );
   console.log("Gettr", Gettr);
@@ -134,19 +135,19 @@ const scrape = async () => {
   const Facebook = FB.match(/(\d+\.*\d*[MK])/)[0];
   console.log("Facebook", Facebook);
 
-  const objToSave = {
-    facebook: Facebook,
-    twitter: Twitter,
-    youtube: YT,
-    instagram: Instagram,
-    tiktok: Tiktok,
-    parler: Parler,
-    rumble: Rumble,
-    gettr: Gettr,
-  };
+  // const objToSave = {
+  //   facebook: Facebook,
+  //   twitter: Twitter,
+  //   youtube: YT,
+  //   instagram: Instagram,
+  //   tiktok: Tiktok,
+  //   parler: Parler,
+  //   rumble: Rumble,
+  //   gettr: Gettr,
+  // };
 
-  console.log(objToSave);
-
-  fs.writeFileSync("socialStats.json", JSON.stringify(objToSave, null, 2));
+  // console.log(objToSave);
+  
+  // fs.writeFileSync("socialStats.json", JSON.stringify(objToSave, null, 2));  
 };
 scrape();

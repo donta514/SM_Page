@@ -69,6 +69,18 @@ header .mrclogo {
   margin-top: 50px;
 }
 
+.back--nb {
+  width: 85%;
+  height: 15%;
+  background: #c9920e;
+}
+
+.back--mrctv {
+  background: #f9f9f9;
+  width: 85%;
+  height: 15%;
+}
+
 .logo-parler {
   width: 70px;
   height: 48px;
@@ -146,6 +158,8 @@ button:hover {
 .grid {
   display: grid;
   row-gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
 }
 .card {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);

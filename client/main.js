@@ -56,7 +56,14 @@ const getAndSetStats = async () => {
     const response = await fetch('/socialstats')
     const socialStats = await response.json()
     console.log(socialStats)
+    document.getElementById('facebookCount').innerHTML = socialStats.facebook
     document.getElementById('twitterCount').innerHTML = socialStats.twitter
+    document.getElementById('ytCount').innerHTML = socialStats.youtube
+    document.getElementById('igCount').innerHTML = socialStats.instagram
+    document.getElementById('tiktokCount').innerHTML = socialStats.tiktok
+    document.getElementById('parlerCount').innerHTML = socialStats.parler
+    document.getElementById('rumbleCount').innerHTML = socialStats.rumble
+    document.getElementById('gettrCount').innerHTML = socialStats.gettr
 }
 
 getAndSetStats()

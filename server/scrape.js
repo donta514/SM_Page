@@ -21,14 +21,14 @@ const scrape = async () => {
 
   //Instagram
 
-  // await page.goto("https://www.instagram.com/mediaresearchcenter/", {
-  //   waitUntil: "networkidle0",
-  // });
+  await page.goto("https://www.instagram.com/mediaresearchcenter/", {
+    waitUntil: "networkidle0",
+  });
 
-  // const Instagram = await page.$eval(
-  //   "header ul li:nth-child(2) span",
-  //   (el) => el.innerHTML
-  // );
+  const Instagram = await page.$eval(
+    "header ul li:nth-child(2) span",
+    (el) => el.innerHTML
+  );
   // console.log("Instagram", Instagram);
 
   // console.log("beep boop - human wait");
@@ -44,7 +44,7 @@ const scrape = async () => {
     "#react-root > div > div > div.css-1dbjc4n.r-18u37iz.r-13qz1uu.r-417010 > main > div > div > div > div > div > div:nth-child(2) > div > div > div > div > div.css-1dbjc4n.r-13awgt0.r-18u37iz.r-1w6e6rj > div:nth-child(2) > a > span.css-901oao.css-16my406.r-18jsvk2.r-poiln3.r-b88u0q.r-bcqeeo.r-qvutc0 > span",
     (el) => el.innerHTML
   );
-  console.log("Twitter", Twitter);
+  // console.log("Twitter", Twitter);
 
   // console.log("beep boop - human wait");
   // await page.waitForTimeout(500 + Math.floor(Math.random() * 1000));
@@ -58,7 +58,7 @@ const scrape = async () => {
     "strong[data-e2e=followers-count]",
     (el) => el.innerHTML
   );
-  console.log("Tiktok", Tiktok);
+  // console.log("Tiktok", Tiktok);
 
   // console.log("beep boop - human wait");
   // await page.waitForTimeout(500 + Math.floor(Math.random() * 1000));
@@ -73,7 +73,7 @@ const scrape = async () => {
     "#__layout > div > div > div.container > div.user-stats > a:nth-child(2) > strong",
     (el) => el.innerHTML
   );
-  console.log("Clapper", Clapper);
+  // console.log("Clapper", Clapper);
 
   // YouTube
 
@@ -84,7 +84,7 @@ const scrape = async () => {
   const YouTube = await page.$eval("#subscriber-count", (el) => el.innerHTML);
   const YT = YouTube.match(/(\d+K)/)[1];
 
-  console.log("YT", YT);
+  // console.log("YT", YT);
 
   //   Gettr
 
@@ -96,7 +96,7 @@ const scrape = async () => {
     "#root > main > div > div > div > div > div > div > div.jss85 > div.jss84 > div.jss87 > div.jss96 > div.jss99 > a:nth-child(2) > span.tooltiptext",
     (el) => el.innerHTML
   );
-  console.log("Gettr", Gettr);
+  // console.log("Gettr", Gettr);
 
   //   Rumble
 
@@ -108,7 +108,7 @@ const scrape = async () => {
     "span.subscribe-button-count",
     (el) => el.innerHTML
   );
-  console.log("Rumble", Rumble);
+  // console.log("Rumble", Rumble);
 
   // Parler
 
@@ -120,7 +120,7 @@ const scrape = async () => {
     "#spa > div > div.main > div.main__content > div > div.user-card > div.user-card__content > div.user-card__user-details > p.user-card__follow > span:nth-child(1) > strong",
     (el) => el.innerHTML
   );
-  console.log("Parler", Parler);
+  // console.log("Parler", Parler);
 
   // Facebook
 
@@ -133,21 +133,21 @@ const scrape = async () => {
     (el) => el.innerHTML
   );
   const Facebook = FB.match(/(\d+\.*\d*[MK])/)[0];
-  console.log("Facebook", Facebook);
+  // console.log("Facebook", Facebook);
 
-  // const objToSave = {
-  //   facebook: Facebook,
-  //   twitter: Twitter,
-  //   youtube: YT,
-  //   instagram: Instagram,
-  //   tiktok: Tiktok,
-  //   parler: Parler,
-  //   rumble: Rumble,
-  //   gettr: Gettr,
-  // };
+  const objToSave = {
+    facebook: Facebook,
+    twitter: Twitter,
+    youtube: YT,
+    instagram: Instagram,
+    tiktok: Tiktok,
+    parler: Parler,
+    rumble: Rumble,
+    gettr: Gettr,
+  };
 
-  // console.log(objToSave);
+  console.log(objToSave);
   
-  // fs.writeFileSync("socialStats.json", JSON.stringify(objToSave, null, 2));  
+  fs.writeFileSync("socialStats.json", JSON.stringify(objToSave, null, 2));  
 };
 scrape();

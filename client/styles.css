@@ -69,16 +69,40 @@ header .mrclogo {
   margin-top: 50px;
 }
 
+.back--grid {
+  list-style-type: none;
+  display: grid;
+  grid-template-rows: repeat(4, autofit);
+  row-gap: .7rem;
+
+}
+
 .back--nb {
-  width: 85%;
-  height: 15%;
+  width: 150px;
+  height: 37px;
   background: #c9920e;
+  border-radius: 5px;
 }
 
 .back--mrctv {
   background: #f9f9f9;
-  width: 85%;
-  height: 15%;
+  width: 150px;
+  height: auto;
+  /* padding: 10px; */
+}
+
+.back--cns {
+  background: #0055bb;
+  width: 150px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.back--fsa {
+  background: #2226ce;
+  width: 150px;
+  height: 35px;
+  border-radius: 5px;
 }
 
 .logo-parler {
@@ -158,8 +182,8 @@ button:hover {
 .grid {
   display: grid;
   row-gap: 1.5rem;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* justify-content: center; */
 }
 .card {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);

@@ -73,14 +73,20 @@ header .mrclogo {
   list-style-type: none;
   display: grid;
   grid-template-rows: repeat(4, autofit);
-  row-gap: .7rem;
-
+  row-gap: 0.7rem;
 }
 
 .back--nb {
   width: 150px;
   height: 37px;
   background: #c9920e;
+  border-radius: 5px;
+}
+
+.back--mrc {
+  width: 150px;
+  height: 35px;
+  background: #002f87;
   border-radius: 5px;
 }
 
@@ -169,7 +175,8 @@ button:hover {
 }
 
 .wrapper {
-  padding: 3rem 1rem;
+  /* padding: 3rem 10rem;
+  align-items: center; */
   /* height: 80vh; */
   /* margin: 20px auto; */
   /* width: 50%; */
@@ -181,10 +188,14 @@ button:hover {
 
 .grid {
   display: grid;
-  row-gap: 1.5rem;
-  /* grid-template-columns: repeat(3, 1fr); */
-  /* justify-content: center; */
+  /* grid-gap: 3rem 2rem; */
+  justify-content: center;
+  /* grid-template-columns: repeat(auto-fit, minmax(214px, 1fr)); */
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh;
+  align-items: center;
 }
+
 .card {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
   border-radius: 0.75rem;
@@ -212,10 +223,17 @@ button:hover {
   align-items: center;
 }
 
-@media screen and (max-width: 895px) {
-  .wrapper {
+@media screen and (max-width: 1025px) {
+  /* .grid {
+    display: grid;
+    grid-gap: 3rem 2rem;
+    justify-content: center;
+    grid-template-columns: repeat (2, 1fr);
+  } */
+
+  /* .wrapper {
     grid-template-columns: repeat(autofit, minmax(214px, 1fr));
     margin: 20px auto;
     width: 214px;
-  }
+  } */
 }

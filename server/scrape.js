@@ -18,10 +18,9 @@ const scrape = async () => {
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3419.0 Safari/537.36"
   );
 
-
   //Instagram
 
-  await page.goto("https://www.instagram.com/mediaresearchcenter/", {
+ /* await page.goto("https://www.instagram.com/mediaresearchcenter/", {
     waitUntil: "networkidle0",
   });
 
@@ -135,11 +134,26 @@ const scrape = async () => {
   const Facebook = FB.match(/(\d+\.*\d*[MK])/)[0];
   // console.log("Facebook", Facebook);
 
+  await page.goto("https://www.linkedin.com/company/media-research-center", {
+    waitUntil: "networkidle0",
+  });
+
+  const LinkedInScrape = await page.$eval(
+    ".top-card-layout__first-subline",
+    (el) => el.innerHTML
+  );
+  const match = LinkedInScrape.trim().match(/(\d,\d{3})\sfollowers$/);
+
+  const LinkedIn = match[1];
+
+  console.log(LinkedIn); */
+
   const objToSave = {
     facebook: Facebook,
     twitter: Twitter,
     youtube: YT,
     instagram: Instagram,
+    linkedin: LinkedIn,
     tiktok: Tiktok,
     parler: Parler,
     rumble: Rumble,
@@ -147,7 +161,7 @@ const scrape = async () => {
   };
 
   console.log(objToSave);
-  
-  fs.writeFileSync("socialStats.json", JSON.stringify(objToSave, null, 2));  
+
+  fs.writeFileSync("socialStats.json", JSON.stringify(objToSave, null, 2));
 };
 scrape();

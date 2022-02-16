@@ -11,7 +11,7 @@ Clapper: https://clapperapp.com/TheMRCTV
 LinkedIn: https://www.linkedin.com/company/media-research-center
 Tiktok: https://www.tiktok.com/@themrctv
 
-*/ 
+*/
 
 /* global formats */
 
@@ -56,6 +56,10 @@ header .mrclogo {
   height: 100%;
 }
 
+li {
+  list-style: none;
+}
+
 .logo {
   margin-top: 50px;
 }
@@ -68,11 +72,12 @@ header .mrclogo {
 }
 
 .back--nb {
-  width: 150px;
-  height: 37px;
+  width: 95%;
+  height: 70%;
   /* background: #ee7624; */
-  border-radius: 5px;
-  position: absolute;
+  /* border-radius: 5px; */
+  /* position: absolute; */
+  grid-area: first;
 }
 
 .back--mrc {
@@ -90,17 +95,15 @@ header .mrclogo {
 }
 
 .back--cns {
-  /* background: #0055bb; */
-  width: 150px;
-  height: 35px;
-  border-radius: 5px;
+  width: 95%;
+  height: 70%;
+  grid-area: second;
 }
 
 .back--fsa {
-  /* background: #2226ce; */
-  width: 150px;
-  height: 35px;
-  border-radius: 5px;
+  width: 95%;
+  height: 70%;
+  grid-area: third;
 }
 
 .logo-parler {
@@ -147,8 +150,9 @@ header .mrclogo {
   font-family: "Helvetica";
   font-size: 12pt;
   position: relative;
-  width: 75px;
-  height: 30px;
+  width: auto;
+  height: auto;
+  padding: 3px;
   top: 10px;
   border-radius: 3px;
   cursor: hand;
@@ -164,7 +168,7 @@ button:hover {
   place-items: center;
   grid-gap: 3rem 1rem;
   grid-template-columns: repeat(auto-fit, minmax(214px, 1fr));
-  margin-top: 3rem;
+  margin: 3% 10%;
   /* grid-template-columns: repeat(12,1fr); */
 }
 
@@ -172,7 +176,7 @@ button:hover {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
   border-radius: 0.75rem;
   height: 15.5rem;
-  min-width: 180px;
+  width: 180px;
   text-align: center;
   font-family: sans-serif;
 }
@@ -185,9 +189,19 @@ button:hover {
 .back {
   width: 100%;
   height: 100%;
+  display: grid;
+  border-radius: 0.75rem;
+  grid-template-rows: 25px 25px;
+  background: #002f87;
+}
+
+.back--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .active {
   background-color: #002f87;
-  color: #fff;
+  /* color: #fff; */
 }

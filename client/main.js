@@ -25,7 +25,7 @@ document.querySelectorAll(".card").forEach((card) => {
     //   console.log("activate");
     //   tlback.play();
     // }
-    const duration = .25
+    const duration = .4
     if(card.classList.contains('active')){
         console.log('deactivate')
         gsap.to(front, {
@@ -60,6 +60,7 @@ const getAndSetStats = async () => {
     document.getElementById('twitterCount').innerHTML = socialStats.twitter
     document.getElementById('ytCount').innerHTML = socialStats.youtube
     document.getElementById('igCount').innerHTML = socialStats.instagram
+    document.getElementById('linkedinCount').innerHTML = socialStats.linkedin
     document.getElementById('tiktokCount').innerHTML = socialStats.tiktok
     document.getElementById('parlerCount').innerHTML = socialStats.parler
     document.getElementById('rumbleCount').innerHTML = socialStats.rumble
@@ -67,3 +68,5 @@ const getAndSetStats = async () => {
 }
 
 getAndSetStats()
+      
+              

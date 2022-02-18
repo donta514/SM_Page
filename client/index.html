@@ -7,6 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <!-- <script type="text/javascript">{
+      `
+                    piAId = '753103';
+                    piCId = '170762';
+                    piHostname = 'pi.pardot.com';
+                    (function() {
+                        function async_load() {
+                            var s = document.createElement('script'); s.type = 'text/javascript';
+                            s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+                            var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+                        }
+                    if(window.attachEvent) {window.attachEvent('onload', async_load); }
+                    else {window.addEventListener('load', async_load, false); }
+                    })();       
+                `}
+  </script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 
     <title>Social Media Page</title>
@@ -25,23 +41,33 @@
     <div class="grid">
         <div class="card">
             <div class="thefront">
-                <img src="logos/facebook_48.png" alt="Facebook Icon" class="logo">
+                <img src="https://cdn.mrc.org/static/mrcsocial/facebook_48.png" alt="Facebook Icon" class="logo">
                 <div class="sm_name">Facebook</div>
                 <div class="detail">
-                    <span id="facebookCount"></span><i class="material-icons">person</i>
+                    <span id="facebookCount"></span>
+                    <!-- <i class="material-icons">person</i> -->
                 </div>
                 <button type="button" class="follow-btn"> + Follow</button>
             </div>
             <div class="theback">
                 <ui>
                     <li class="">
-                        <img src="https://mrc7.s3.amazonaws.com/MRCTVStandard_Logo.png" alt="" class="back--mrctv">
-                        <img src="https://cdn.newsbusters.org/2021-05/MRCNewsBustersStandardTaglineLogo_White.png"
-                            alt="" class="back--nb">
-                        <img src="https://mrc7.s3.amazonaws.com/CNSNewsStandardTagline_Logo_White.png" alt=""
-                            class="back--cns">
-                        <img src="https://cdn.newsbusters.org/2021-03/FreeSpeechAmericaLogo_WHITE_1.png" alt=""
-                            class="back--fsa">
+                        <a href="">
+                            <img src="https://cdn.mrc.org/2022-02/MRCTVStandard_Logo_White.png" alt=""
+                                class="back--mrctv">
+                        </a>
+                        <a href="">
+                            <img src="https://cdn.newsbusters.org/2021-05/MRCNewsBustersStandardTaglineLogo_White.png"
+                                alt="" class="back--nb">
+                        </a>
+                        <a href="">
+                            <img src="https://mrc7.s3.amazonaws.com/CNSNewsStandardTagline_Logo_White.png" alt=""
+                                class="back--cns">
+                        </a>
+                        <a href="">
+                            <img src="https://cdn.newsbusters.org/2021-03/FreeSpeechAmericaLogo_WHITE_1.png" alt=""
+                                class="back--fsa">
+                        </a>
                     </li>
                 </ui>
             </div>
@@ -49,17 +75,18 @@
 
         <div class="card">
             <div class="thefront">
-                <img src="logos/twitter_48.png" alt="Twitter Icon" class="logo">
+                <img src="https://cdn.mrc.org/static/mrcsocial/twitter_48.png" alt="Twitter Icon" class="logo">
                 <div class="sm_name">Twitter</div>
                 <div class="detail">
-                    <span id="twitterCount"></span><i class="material-icons">person</i>
+                    <span id="twitterCount"></span>
+                    <!-- <i class="material-icons">person</i> -->
                 </div>
                 <button class="follow-btn"> + Follow</button>
             </div>
             <div class="theback">
                 <ui>
                     <li class="">
-                        <img src="https://mrc7.s3.amazonaws.com/MRCTVStandard_Logo.png" alt="" class="back--mrctv">
+                        <img src="https://cdn.mrc.org/2022-02/MRCTVStandard_Logo_White.png" alt="" class="back--mrctv">
                         <img src="https://cdn.newsbusters.org/2021-05/MRCNewsBustersStandardTaglineLogo_White.png"
                             alt="" class="back--nb">
                         <img src="https://mrc7.s3.amazonaws.com/CNSNewsStandardTagline_Logo_White.png" alt=""
@@ -73,10 +100,11 @@
 
         <div class="card">
             <div class="thefront">
-                <img src="logos/youtube_48.png" alt="YouTube Icon" class="logo">
+                <img src="https://cdn.mrc.org/static/mrcsocial/youtube_48.png" alt="YouTube Icon" class="logo">
                 <div class="sm_name">YouTube</div>
                 <div class="detail">
-                    <span id="ytCount"></span><i class="material-icons">person</i>
+                    <span id="ytCount"></span>
+                    <!-- <i class="material-icons">person</i> -->
                 </div>
                 <a href="https://www.youtube.com/c/MRCTV" class="">
                     <button class="follow-btn"> + Follow</button>
@@ -86,10 +114,11 @@
 
         <div class=" card">
             <div class="thefront">
-                <img src="logos/instagram_48.png" alt="Instagram Icon" class="logo">
+                <img src="https://cdn.mrc.org/static/mrcsocial/instagram_48.png" alt="Instagram Icon" class="logo">
                 <div class="sm_name">Instagram</div>
                 <div class="detail">
-                    <span id="igCount"></span><i class="material-icons">person</i>
+                    <span id="igCount"></span>
+                    <!-- <i class="material-icons">person</i> -->
                 </div>
                 <a href="https://www.instagram.com/mediaresearchcenter/" class="">
                     <button class="follow-btn"> + Follow</button>
@@ -98,7 +127,7 @@
             <div class="theback">
                 <ui>
                     <li class="">
-                        <img src="https://mrc7.s3.amazonaws.com/MRCTVStandard_Logo.png" alt="" class="back--mrctv">
+                        <img src="https://cdn.mrc.org/2022-02/MRCTVStandard_Logo_White.png" alt="" class="back--mrctv">
                         <img src="https://cdn.newsbusters.org/2021-05/MRCNewsBustersStandardTaglineLogo_White.png"
                             alt="" class="back--nb">
                         <img src="https://mrc7.s3.amazonaws.com/CNSNewsStandardTagline_Logo_White.png" alt=""
@@ -113,10 +142,11 @@
 
         <div class=" card">
             <div class="thefront">
-                <img src="logos/linkedin_48.png" alt="LinkedIn Icon" class="logo">
+                <img src="https://cdn.mrc.org/static/mrcsocial/linkedin_48.png" alt="LinkedIn Icon" class="logo">
                 <div class="sm_name">LinkedIn</div>
                 <div class="detail">
-                    <span id="linkedinCount"></span><i class="material-icons">person</i>
+                    <span id="linkedinCount"></span>
+                    <!-- <i class="material-icons">person</i> -->
                 </div>
                 <a href="https://www.linkedin.com/company/media-research-center" class="">
                     <button class="follow-btn"> + Follow</button>
@@ -127,10 +157,11 @@
 
         <div class=" card">
             <div class="thefront">
-                <img src="logos/tiktok_48.png" alt="Tiktok Icon" class="logo-tiktok">
+                <img src="https://cdn.mrc.org/static/mrcsocial/tiktok_48.png" alt="Tiktok Icon" class="logo-tiktok">
                 <div class="sm_name">Tiktok</div>
                 <div class="detail">
-                    <span id="tiktokCount"></span><i class="material-icons">person</i>
+                    <span id="tiktokCount"></span>
+                    <!-- <i class="material-icons">person</i> -->
                 </div>
                 <a href="https://vm.tiktok.com/ZMeA3wwjt/" class="">
                     <button class="follow-btn"> + Follow</button>
@@ -141,10 +172,11 @@
 
         <div class=" card">
             <div class="thefront">
-                <img src="logos/clapper_48.png" alt="Clapper Icon" class="logo-clapper">
+                <img src="https://cdn.mrc.org/static/mrcsocial/clapper_48.png" alt="Clapper Icon" class="logo-clapper">
                 <div class="sm_name">Clapper</div>
                 <div class="detail">
-                    <span id="tiktokCount"></span><i class="material-icons">person</i>
+                    <span id="clapperCount"></span>
+                    <!-- <i class="material-icons">person</i> -->
                 </div>
                 <a href="https://clapperapp.com/TheMRCTV" class="">
                     <button class="follow-btn"> + Follow</button>
@@ -153,7 +185,7 @@
             <div class="theback">
                 <ui>
                     <li class="">
-                        <img src="https://mrc7.s3.amazonaws.com/MRCTVStandard_Logo.png" alt="" class="back--mrctv">
+                        <img src="https://cdn.mrc.org/2022-02/MRCTVStandard_Logo_White.png" alt="" class="back--mrctv">
                         <img src="https://cdn.newsbusters.org/2021-05/MRCNewsBustersStandardTaglineLogo_White.png"
                             alt="" class="back--nb">
                         <img src="https://mrc7.s3.amazonaws.com/CNSNewsStandardTagline_Logo_White.png" alt=""
@@ -167,10 +199,11 @@
 
         <div class="card">
             <div class="thefront">
-                <img src="logos/parler_48.png" alt="Parler Icon" class="logo-parler">
+                <img src="https://cdn.mrc.org/static/mrcsocial/parler_48.png" alt="Parler Icon" class="logo-parler">
                 <div class="sm_name">Parler</div>
                 <div class="detail">
-                    <span id="parlerCount"></span><i class="material-icons">person</i>
+                    <span id="parlerCount"></span>
+                    <!-- <i class="material-icons">person</i> -->
                 </div>
                 <a href="" class="">
                     <button class="follow-btn"> + Follow</button>
@@ -179,13 +212,22 @@
             <div class="theback">
                 <ui>
                     <li class="">
-                        <img src="https://mrc7.s3.amazonaws.com/MRCTVStandard_Logo.png" alt="" class="back--mrctv">
-                        <img src="https://cdn.newsbusters.org/2021-05/MRCNewsBustersStandardTaglineLogo_White.png"
-                            alt="" class="back--nb">
-                        <img src="https://mrc7.s3.amazonaws.com/CNSNewsStandardTagline_Logo_White.png" alt=""
-                            class="back--cns">
-                        <img src="https://cdn.newsbusters.org/2021-03/FreeSpeechAmericaLogo_WHITE_1.png" alt=""
-                            class="back--fsa">
+                        <a href="">
+                            <img src="https://cdn.mrc.org/2022-02/MRCTVStandard_Logo_White.png" alt=""
+                                class="back--mrctv">
+                        </a>
+                        <a href="">
+                            <img src="https://cdn.newsbusters.org/2021-05/MRCNewsBustersStandardTaglineLogo_White.png"
+                                alt="" class="back--nb">
+                        </a>
+                        <a href="https://parler.com/#/user/CNSNews">
+                            <img src="https://mrc7.s3.amazonaws.com/CNSNewsStandardTagline_Logo_White.png" alt=""
+                                class="back--cns">
+                        </a>
+                        <a href="">
+                            <img src="https://cdn.newsbusters.org/2021-03/FreeSpeechAmericaLogo_WHITE_1.png" alt=""
+                                class="back--fsa">
+                        </a>
                     </li>
                 </ui>
             </div>
@@ -194,10 +236,11 @@
 
         <div class="card">
             <div class="thefront">
-                <img src="logos/rumble_48.png" alt="Rumble Icon" class="logo-rumble">
+                <img src="https://cdn.mrc.org/static/mrcsocial/rumble_48.png" alt="Rumble Icon" class="logo-rumble">
                 <div class="sm_name">Rumble</div>
                 <div class="detail">
-                    <span id="rumbleCount"></span><i class="material-icons">person</i>
+                    <span id="rumbleCount"></span>
+                    <!-- <i class="material-icons">person</i> -->
                 </div>
                 <a href="https://rumble.com/c/c-650973" class="">
                     <button class="follow-btn"> + Follow</button>
@@ -206,7 +249,7 @@
             <div class="theback">
                 <ui>
                     <li class="">
-                        <img src="https://mrc7.s3.amazonaws.com/MRCTVStandard_Logo.png" alt="" class="back--mrctv">
+                        <img src="https://cdn.mrc.org/2022-02/MRCTVStandard_Logo_White.png" alt="" class="back--mrctv">
                         <img src="https://cdn.newsbusters.org/2021-05/MRCNewsBustersStandardTaglineLogo_White.png"
                             alt="" class="back--nb">
                         <img src="https://mrc7.s3.amazonaws.com/CNSNewsStandardTagline_Logo_White.png" alt=""
@@ -221,10 +264,11 @@
 
         <div class="card">
             <div class="thefront">
-                <img src="logos/gettr_48.png" alt="Gettr Icon" class="logo-gettr">
+                <img src="https://cdn.mrc.org/static/mrcsocial/gettr_48.png" alt="Gettr Icon" class="logo-gettr">
                 <div class="sm_name">Gettr</div>
                 <div class="detail">
-                    <span id="gettrCount"></span><i class="material-icons">person</i>
+                    <span id="gettrCount"></span>
+                    <!-- <i class="material-icons">person</i> -->
                 </div>
                 <a href="https://gettr.com/user/themrc" class="">
                     <button class="follow-btn"> + Follow</button>
@@ -233,7 +277,7 @@
             <div class="theback">
                 <ui>
                     <li class="">
-                        <img src="https://mrc7.s3.amazonaws.com/MRCTVStandard_Logo.png" alt="" class="back--mrctv">
+                        <img src="https://cdn.mrc.org/2022-02/MRCTVStandard_Logo_White.png" alt="" class="back--mrctv">
                         <img src="https://cdn.newsbusters.org/2021-05/MRCNewsBustersStandardTaglineLogo_White.png"
                             alt="" class="back--nb">
                         <img src="https://mrc7.s3.amazonaws.com/CNSNewsStandardTagline_Logo_White.png" alt=""

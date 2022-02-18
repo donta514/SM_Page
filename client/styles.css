@@ -60,6 +60,11 @@ li {
   list-style: none;
 }
 
+span {
+  font-size: 16px;
+  font-weight: 100;
+}
+
 .logo {
   margin-top: 50px;
 }
@@ -79,9 +84,8 @@ li {
 }
 
 .back--mrctv {
-  background: #f9f9f9;
   position: relative;
-  width: 150px;
+  width: 120px;
   height: auto;
   bottom: 1rem;
 }

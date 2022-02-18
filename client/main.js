@@ -65,6 +65,7 @@ const getAndSetStats = async () => {
     document.getElementById('parlerCount').innerHTML = socialStats.parler
     document.getElementById('rumbleCount').innerHTML = socialStats.rumble
     document.getElementById('gettrCount').innerHTML = socialStats.gettr
+    document.getElementById('clapperCount').innerHTML = socialStats.clapper
 }
 
 getAndSetStats()

@@ -20,14 +20,14 @@ const scrape = async () => {
 
   //Instagram
 
- /* await page.goto("https://www.instagram.com/mediaresearchcenter/", {
-    waitUntil: "networkidle0",
-  });
+  // await page.goto("https://www.instagram.com/mediaresearchcenter/", {
+  //   waitUntil: "networkidle0",
+  // });
 
-  const Instagram = await page.$eval(
-    "header ul li:nth-child(2) span",
-    (el) => el.innerHTML
-  );
+  // const Instagram = await page.$eval(
+  //   "header ul li:nth-child(2) span",
+  //   (el) => el.innerHTML
+  // );
   // console.log("Instagram", Instagram);
 
   // console.log("beep boop - human wait");
@@ -35,18 +35,19 @@ const scrape = async () => {
 
   //   Twitter
 
-  await page.goto("https://twitter.com/theMRC", {
+ /* await page.goto("https://twitter.com/theMRC", {
     waitUntil: "networkidle0",
   });
 
   const Twitter = await page.$eval(
-    "#react-root > div > div > div.css-1dbjc4n.r-18u37iz.r-13qz1uu.r-417010 > main > div > div > div > div > div > div:nth-child(2) > div > div > div > div > div.css-1dbjc4n.r-13awgt0.r-18u37iz.r-1w6e6rj > div:nth-child(2) > a > span.css-901oao.css-16my406.r-18jsvk2.r-poiln3.r-b88u0q.r-bcqeeo.r-qvutc0 > span",
+    "css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0",
     (el) => el.innerHTML
   );
-  // console.log("Twitter", Twitter);
+  console.log("Twitter", Twitter);
 
   // console.log("beep boop - human wait");
-  // await page.waitForTimeout(500 + Math.floor(Math.random() * 1000));
+  await page.waitForTimeout(500 + Math.floor(Math.random() * 1000));
+
   //   Tiktok
 
   await page.goto("https://www.tiktok.com/@themrctv", {
@@ -57,22 +58,10 @@ const scrape = async () => {
     "strong[data-e2e=followers-count]",
     (el) => el.innerHTML
   );
-  // console.log("Tiktok", Tiktok);
+  console.log("Tiktok", Tiktok);
 
   // console.log("beep boop - human wait");
-  // await page.waitForTimeout(500 + Math.floor(Math.random() * 1000));
-
-  //   Clapper
-
-  await page.goto("https://clapperapp.com/TheMRCTV", {
-    waitUntil: "networkidle0",
-  });
-
-  const Clapper = await page.$eval(
-    "#__layout > div > div > div.container > div.user-stats > a:nth-child(2) > strong",
-    (el) => el.innerHTML
-  );
-  // console.log("Clapper", Clapper);
+  await page.waitForTimeout(500 + Math.floor(Math.random() * 1000));
 
   // YouTube
 
@@ -83,7 +72,8 @@ const scrape = async () => {
   const YouTube = await page.$eval("#subscriber-count", (el) => el.innerHTML);
   const YT = YouTube.match(/(\d+K)/)[1];
 
-  // console.log("YT", YT);
+  console.log("YouTube", YT);
+  await page.waitForTimeout(500 + Math.floor(Math.random() * 1000));
 
   //   Gettr
 
@@ -95,7 +85,8 @@ const scrape = async () => {
     "#root > main > div > div > div > div > div > div > div.jss85 > div.jss84 > div.jss87 > div.jss96 > div.jss99 > a:nth-child(2) > span.tooltiptext",
     (el) => el.innerHTML
   );
-  // console.log("Gettr", Gettr);
+  console.log("Gettr", Gettr);
+  await page.waitForTimeout(500 + Math.floor(Math.random() * 1000));
 
   //   Rumble
 
@@ -107,7 +98,8 @@ const scrape = async () => {
     "span.subscribe-button-count",
     (el) => el.innerHTML
   );
-  // console.log("Rumble", Rumble);
+  console.log("Rumble", Rumble); 
+  await page.waitForTimeout(500 + Math.floor(Math.random() * 1000));
 
   // Parler
 
@@ -119,7 +111,8 @@ const scrape = async () => {
     "#spa > div > div.main > div.main__content > div > div.user-card > div.user-card__content > div.user-card__user-details > p.user-card__follow > span:nth-child(1) > strong",
     (el) => el.innerHTML
   );
-  // console.log("Parler", Parler);
+  console.log("Parler", Parler);
+  await page.waitForTimeout(500 + Math.floor(Math.random() * 1000));
 
   // Facebook
 
@@ -132,7 +125,10 @@ const scrape = async () => {
     (el) => el.innerHTML
   );
   const Facebook = FB.match(/(\d+\.*\d*[MK])/)[0];
-  // console.log("Facebook", Facebook);
+  console.log("Facebook", Facebook);  
+  await page.waitForTimeout(500 + Math.floor(Math.random() * 1000));
+
+  // LinkedIn
 
   await page.goto("https://www.linkedin.com/company/media-research-center", {
     waitUntil: "networkidle0",
@@ -144,24 +140,39 @@ const scrape = async () => {
   );
   const match = LinkedInScrape.trim().match(/(\d,\d{3})\sfollowers$/);
 
-  const LinkedIn = match[1];
+  const LinkedIn = match[1]; 
 
-  console.log(LinkedIn); */
+  console.log("LinkedIn", LinkedIn)
+  await page.waitForTimeout(500 + Math.floor(Math.random() * 1000));
 
-  const objToSave = {
-    facebook: Facebook,
-    twitter: Twitter,
-    youtube: YT,
-    instagram: Instagram,
-    linkedin: LinkedIn,
-    tiktok: Tiktok,
-    parler: Parler,
-    rumble: Rumble,
-    gettr: Gettr,
-  };
+  // Clapper
 
-  console.log(objToSave);
+  await page.goto("https://clapperapp.com/TheMRCTV", {
+    waitUntil: "networkidle0",
+  });
 
-  fs.writeFileSync("socialStats.json", JSON.stringify(objToSave, null, 2));
+  const Clapper = await page.$eval(
+    "a.user-stat-group:nth-child(2) > strong:nth-child(1)",
+    (el) => el.innerHTML
+  );
+  console.log("Clapper", Clapper); */
+
+
+  // const objToSave = {
+  //   facebook: Facebook,
+  //   twitter: Twitter,
+  //   youtube: YT,
+  //   instagram: Instagram,
+  //   linkedin: LinkedIn,
+  //   tiktok: Tiktok,
+  //   clapper: Clapper,
+  //   parler: Parler,
+  //   rumble: Rumble,
+  //   gettr: Gettr,
+  // };
+
+  // console.log(objToSave);
+
+  // fs.writeFileSync("socialStats.json", JSON.stringify(objToSave, null, 2));
 };
 scrape();

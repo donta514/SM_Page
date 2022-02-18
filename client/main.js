@@ -25,7 +25,7 @@ document.querySelectorAll(".card").forEach((card) => {
     //   console.log("activate");
     //   tlback.play();
     // }
-    const duration = .4
+    const duration = .5
     if(card.classList.contains('active')){
         console.log('deactivate')
         gsap.to(front, {

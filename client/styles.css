@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  background: #f9f9f9;
+  /* background: #f9f9f9; */
   height: 100vh;
 }
 
@@ -64,20 +64,11 @@ li {
   margin-top: 50px;
 }
 
-.back--grid {
-  list-style-type: none;
-  /* display: grid; */
-  /* grid-template-rows: repeat(4, autofit); */
-  /* row-gap: 0.7rem; */
-}
-
 .back--nb {
-  width: 95%;
-  height: 70%;
-  /* background: #ee7624; */
-  /* border-radius: 5px; */
-  /* position: absolute; */
-  grid-area: first;
+  width: 150px;
+  height: auto;
+  position: relative;
+  bottom: 0.4rem;
 }
 
 .back--mrc {
@@ -89,21 +80,24 @@ li {
 
 .back--mrctv {
   background: #f9f9f9;
+  position: relative;
   width: 150px;
   height: auto;
-  padding: 10px;
+  bottom: 1rem;
 }
 
 .back--cns {
-  width: 95%;
-  height: 70%;
-  grid-area: second;
+  position: relative;
+  top: 0.4rem;
+  width: 150px;
+  height: auto;
 }
 
 .back--fsa {
-  width: 95%;
-  height: 70%;
-  grid-area: third;
+  position: relative;
+  top: 1rem;
+  width: 150px;
+  height: auto;
 }
 
 .logo-parler {
@@ -118,6 +112,13 @@ li {
   height: 50px;
   display: block;
   margin: 50px auto 10px auto;
+}
+
+.logo-clapper {
+  width: 70px;
+  height: 70px;
+  display: block;
+  margin: 40px auto -6px auto;
 }
 
 .logo-rumble {
@@ -138,7 +139,6 @@ li {
   font-size: 21px;
   margin: 6px auto 35px auto;
   font-weight: bold;
-  /* padding-top: 1rem; */
 }
 
 .detail {
@@ -155,7 +155,6 @@ li {
   padding: 3px;
   top: 10px;
   border-radius: 3px;
-  cursor: hand;
   border: 1px solid;
 }
 
@@ -169,39 +168,39 @@ button:hover {
   grid-gap: 3rem 1rem;
   grid-template-columns: repeat(auto-fit, minmax(214px, 1fr));
   margin: 3% 10%;
-  /* grid-template-columns: repeat(12,1fr); */
 }
 
 .card {
+  position: relative;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
   border-radius: 0.75rem;
   height: 15.5rem;
   width: 180px;
   text-align: center;
-  font-family: sans-serif;
-}
-
-.front {
-  width: 100%;
-  height: 100%;
-}
-
-.back {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  border-radius: 0.75rem;
-  grid-template-rows: 25px 25px;
-  background: #002f87;
-}
-
-.back--container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-family: "Helvetica";
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-out;
 }
 
 .active {
   background-color: #002f87;
-  /* color: #fff; */
+  transform: rotateY(180deg);
+}
+
+.thefront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.theback {
+  display: grid;
+  position: absolute;
+  place-items: center;
+  border-radius: 0.75rem;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
 }

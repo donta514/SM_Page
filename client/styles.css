@@ -73,7 +73,7 @@ span {
   width: 150px;
   height: auto;
   position: relative;
-  bottom: 0.4rem;
+  bottom: -0.6rem;
 }
 
 .back--mrc {
@@ -83,17 +83,57 @@ span {
   border-radius: 5px;
 }
 
+.back--latino {
+  /* position: relative; */
+  /* margin-left: 13px; */
+  display: block;
+  width: 100px;
+  height: auto;
+  /* bottom: 10px; */
+}
+
+.back--culture {
+  position: relative;
+  /* margin-left: 13px; */
+  display: block;
+  width: 100px;
+  height: auto;
+  top: 5px;
+}
+
 .back--mrctv {
   position: relative;
-  width: 120px;
+  /* margin-left: 13px; */
+  display: block;
+  width: 100px;
   height: auto;
-  bottom: 1rem;
+  bottom: 10px;
+}
+
+.back--mrctv-pl {
+  position: relative;
+  margin-left: 13px;
+  display: block;
+  width: 100px;
+  height: auto;
+  bottom: 10px;
 }
 
 .back--cns {
   position: relative;
-  top: 0.4rem;
-  width: 150px;
+  display: block;
+  /* margin-left: 13px; */
+  bottom: 5px;
+  width: 105px;
+  height: auto;
+}
+
+.back--cns-pl {
+  position: relative;
+  display: block;
+  margin-left: 13px;
+  /* bottom: 5px; */
+  width: 105px;
   height: auto;
 }
 

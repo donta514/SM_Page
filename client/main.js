@@ -53,7 +53,7 @@ document.querySelectorAll(".card").forEach((card) => {
 });
 
 const getAndSetStats = async () => {
-    const response = await fetch('/socialstats')
+    const response = await fetch('/api/socialstats')
     const socialStats = await response.json()
     console.log(socialStats)
     document.getElementById('facebookCount').innerHTML = socialStats.facebook

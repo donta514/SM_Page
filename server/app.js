@@ -3,7 +3,7 @@ const path = require('path')
 
 
 const app = express()
-const PORT = 5000
+const PORT = 3001
 
 
 app.use(express.static("../client"))
@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     res.send("I'm working")
 })
 
-app.get('/socialstats', (req, res) => {
+app.get('/api/socialstats', (req, res) => {
     const stats = require('./socialStats.json')
     res.status(200).json(stats)
     // res.send("I'm working")

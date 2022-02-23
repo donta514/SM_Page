@@ -226,6 +226,11 @@ button:hover {
   transition: all 0.5s ease-out;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 .cards {
   position: relative;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
@@ -234,8 +239,8 @@ button:hover {
   width: 180px;
   text-align: center;
   font-family: "Helvetica";
-  /* transform-style: preserve-3d;
-  transition: all 0.5s ease-out; */
+  transform-style: preserve-3d;
+  /* transition: all 1s ease-out; */
 }
 
 .active {

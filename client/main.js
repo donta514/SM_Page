@@ -25,49 +25,47 @@ document.querySelectorAll(".card").forEach((card) => {
     //   console.log("activate");
     //   tlback.play();
     // }
-    const duration = .5
-    if(card.classList.contains('active')){
-        console.log('deactivate')
-        gsap.to(front, {
-            duration,
-            opacity: 0
-        })
-        gsap.to(back, {
-            duration,
-            opacity: 1
-        })
-    }
-    else{
-        console.log('activate')
-        gsap.to(back, {
-            duration,
-            opacity: 0
-        })
-        gsap.to(front, {
-            duration,
-            opacity: 1
-        })
-
+    const duration = 0.5;
+    if (card.classList.contains("active")) {
+      console.log("deactivate");
+      gsap.to(front, {
+        duration,
+        opacity: 0,
+      });
+      gsap.to(back, {
+        duration,
+        opacity: 1,
+      });
+    } else {
+      console.log("activate");
+      gsap.to(back, {
+        duration,
+        opacity: 0,
+      });
+      gsap.to(front, {
+        duration,
+        opacity: 1,
+      });
     }
   });
 });
 
-const getAndSetStats = async () => {
-    const response = await fetch('/api/socialstats')
-    const socialStats = await response.json()
-    console.log(socialStats)
-    document.getElementById('facebookCount').innerHTML = socialStats.facebook
-    document.getElementById('twitterCount').innerHTML = socialStats.twitter
-    document.getElementById('ytCount').innerHTML = socialStats.youtube
-    document.getElementById('igCount').innerHTML = socialStats.instagram
-    document.getElementById('linkedinCount').innerHTML = socialStats.linkedin
-    document.getElementById('tiktokCount').innerHTML = socialStats.tiktok
-    document.getElementById('parlerCount').innerHTML = socialStats.parler
-    document.getElementById('rumbleCount').innerHTML = socialStats.rumble
-    document.getElementById('gettrCount').innerHTML = socialStats.gettr
-    document.getElementById('clapperCount').innerHTML = socialStats.clapper
-}
+// if file is not pulling consider adding no cors mode back in
 
-getAndSetStats()
-      
-              
+const getAndSetStats = async () => {
+  const response = await fetch('/api/socialstats');
+  const socialStats = await response.json();
+  console.log(socialStats);
+  document.getElementById("facebookCount").innerHTML = socialStats.facebook;
+  document.getElementById("twitterCount").innerHTML = socialStats.twitter;
+  document.getElementById("ytCount").innerHTML = socialStats.youtube;
+  document.getElementById("igCount").innerHTML = socialStats.instagram;
+  document.getElementById("linkedinCount").innerHTML = socialStats.linkedin;
+  document.getElementById("tiktokCount").innerHTML = socialStats.tiktok;
+  document.getElementById("parlerCount").innerHTML = socialStats.parler;
+  document.getElementById("rumbleCount").innerHTML = socialStats.rumble;
+  document.getElementById("gettrCount").innerHTML = socialStats.gettr;
+  document.getElementById("clapperCount").innerHTML = socialStats.clapper;
+};
+
+getAndSetStats();

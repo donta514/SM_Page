@@ -98,7 +98,7 @@ span {
   display: block;
   width: 100px;
   height: auto;
-  top: 5px;
+  top: 8px;
 }
 
 .back--mrctv {
@@ -224,6 +224,18 @@ button:hover {
   font-family: "Helvetica";
   transform-style: preserve-3d;
   transition: all 0.5s ease-out;
+}
+
+.cards {
+  position: relative;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-radius: 0.75rem;
+  height: 15.5rem;
+  width: 180px;
+  text-align: center;
+  font-family: "Helvetica";
+  /* transform-style: preserve-3d;
+  transition: all 0.5s ease-out; */
 }
 
 .active {

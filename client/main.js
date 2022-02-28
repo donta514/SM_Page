@@ -1,5 +1,5 @@
 var cards = document.querySelectorAll("div.flip");
-console.log(cards)
+console.log(cards);
 for (let card of cards) {
   card.addEventListener("click", function () {
     card.classList.toggle("is-flipped");
@@ -87,3 +87,4 @@ for (let card of cards) {
 // };
 
 // getAndSetStats();
+
